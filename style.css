@@ -3,8 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: Marathon;
     
+}
+html{
+    scroll-behavior: smooth;
 }
 
 body {
@@ -19,13 +22,10 @@ body {
     font-style: normal;
 }
 
-html{
-    scroll-behavior: smooth;
-}
 
 :root {
     --txt-color: #be0000;
-    --txt-color-2: #232323fa;
+    --txt-color-2: #1f1202fa;
     --txt-shadow: 5px 5px #0000;
 }
 
@@ -66,14 +66,23 @@ h1 {
 
 }
 p{
-     
-     padding: 0 20px;
+     font-family: Marathon;
+     padding: 0 40px;
      
 }
 p span{
+    
     font-family: Marathon;
     font-size: 25px;
     color: var(--txt-color-2);
+}
+.nav{
+ margin-top: 50px;
+display: flex;
+column-gap: 20px;
+}
+.nav a{
+   color: var(--txt-color-2);
 }
 .logo{
     position: absolute;
@@ -81,3 +90,20 @@ p span{
     border-bottom: 1px solid var(--txt-color-2);
     padding: 10px;
 }
+
+.days ,
+.hours,
+.minutes,
+.seconds{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+}
+#days,
+#hours,
+#minutes,
+#seconds{
+    font-size: 100px;
+}
+

@@ -53,7 +53,38 @@ function main() {
 
 
 
-
+    function countdown(targetDate) {
+        function updateCountdown() {
+          const now = new Date();
+          const timeDifference = targetDate - now;
+          
+          if (timeDifference <= 0) {
+            clearInterval(interval);
+            document.getElementById("days").innerText = "0";
+            document.getElementById("hours").innerText = "0";
+            document.getElementById("minutes").innerText = "0";
+            document.getElementById("seconds").innerText = "0";
+            return;
+          }
+          
+          const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+          
+          document.getElementById("days").innerText = days;
+          document.getElementById("hours").innerText = hours;
+          document.getElementById("minutes").innerText = minutes;
+          document.getElementById("seconds").innerText = seconds;
+        }
+        
+        const interval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+      }
+      
+      // Sana va vaqtni belgilash (masalan, 2025-yil 4-aprel, 15:30)
+      const targetDate = new Date("2025-04-05T11:00:00");
+      countdown(targetDate);
 
 
 
