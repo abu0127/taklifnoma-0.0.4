@@ -6,9 +6,6 @@
     font-family: Marathon;
     
 }
-html{
-    scroll-behavior: smooth;
-}
 
 body {
     background-color: rgb(235, 235, 235);
@@ -36,6 +33,7 @@ body {
     overflow: scroll;
     scroll-snap-type: y mandatory;
     transition: all 1s;
+    scroll-behavior: smooth;
 }
 .section {
     position: relative;
@@ -83,11 +81,12 @@ bottom: 25%;
 display: flex;
 column-gap: 50px;
 }
-.nav a{
+.nav a,#location{
    color: var(--txt-color-2);
    font-size: 30px;
    
 }
+
 .logo{
     position: absolute;
     bottom: 7%;
@@ -110,4 +109,23 @@ column-gap: 50px;
 #seconds{
     font-size: 100px;
 }
+.map{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+#location i{
+    color: var(--txt-color-2);
+    text-align: center;
+    font-size: 55px;
+}
+.builder{
+    position: absolute;
+    bottom: 7%;
+}
+
+.builder a{
+    color: var(--txt-color-2);
+   font-size: 20px;
+}
