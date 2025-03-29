@@ -25,7 +25,7 @@ body {
 
 :root {
     --txt-color: #be0000;
-    --txt-color-2: #1f1202fa;
+    --txt-color-2: #1f1202dc;
     --txt-shadow: 5px 5px #0000;
 }
 
@@ -69,24 +69,28 @@ p{
      font-family: Marathon;
      padding: 0 40px;
      
+     
 }
 p span{
     
     font-family: Marathon;
-    font-size: 25px;
+    font-size: 30px;
     color: var(--txt-color-2);
 }
 .nav{
- margin-top: 50px;
+position: absolute;
+bottom: 25%;
 display: flex;
-column-gap: 20px;
+column-gap: 50px;
 }
 .nav a{
    color: var(--txt-color-2);
+   font-size: 30px;
+   
 }
 .logo{
     position: absolute;
-    bottom: 10%;
+    bottom: 7%;
     border-bottom: 1px solid var(--txt-color-2);
     padding: 10px;
 }
