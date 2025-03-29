@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+}
+
+@font-face {
+    font-family: 'Heyam';
+    src: url('./transfonter.org-20250326-223255/HappyAutumnRegular.woff2') format('woff2'),
+        url('./transfonter.org-20250326-223255/HappyAutumnRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+:root {
+    --txt-color: #be0000;
+    --txt-color-2: #232323;
+    --txt-shadow: 5px 5px #0000;
+}
+
+.container {
+    max-width: 500px;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    transition: all 1s;
+}
+.section {
+    height: 100lvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+}
+.section-1{
+    background-color: aquamarine;
+
+}
+.section-2{
+    background-color: rgb(113, 220, 47);
+
+}
+.section-3{
+    background-color: rgb(238, 153, 25);
+
+}
+h1 {
+    font-family: Heyam;
+    font-size: 50px;
+    color: var(--txt-color);
+    text-shadow: var(--txt-shadow);
+
+}
+
