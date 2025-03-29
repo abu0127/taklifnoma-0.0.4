@@ -12,19 +12,20 @@ body {
 }
 
 @font-face {
-    font-family: 'Heyam';
-    src: url('./transfonter.org-20250326-223255/HappyAutumnRegular.woff2') format('woff2'),
-        url('./transfonter.org-20250326-223255/HappyAutumnRegular.woff') format('woff');
+    font-family: 'Marathon';
+    src: url('./first-font/Marathon.woff2') format('woff2'),
+        url('./first-font/Marathon.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
 html{
     scroll-behavior: smooth;
 }
 
 :root {
     --txt-color: #be0000;
-    --txt-color-2: #232323;
+    --txt-color-2: #232323fa;
     --txt-shadow: 5px 5px #0000;
 }
 
@@ -37,29 +38,46 @@ html{
     transition: all 1s;
 }
 .section {
+    position: relative;
     height: 100lvh;
     display: flex;
     align-items: center;
     justify-content: center;
     scroll-snap-align: start;
+    flex-direction: column;
 }
 .section-1{
-    background-color: aquamarine;
+    background:url('./home-page.png');
+    background-size: cover;
+    background-position: center;
 
 }
-.section-2{
-    background-color: rgb(113, 220, 47);
-
-}
+.section-2,
 .section-3{
-    background-color: rgb(238, 153, 25);
+    background:url('./Cream\ Vintage\ Coffee\ Shop\ Menu\ Instagram\ Story\ \(1\).png');
 
 }
+
 h1 {
-    font-family: Heyam;
-    font-size: 50px;
-    color: var(--txt-color);
+    font-family: Marathon;
+    font-size: 30px;
+    color: var(--txt-color-2);
     text-shadow: var(--txt-shadow);
 
 }
-
+p{
+     
+     padding: 0 20px;
+     
+}
+p span{
+    font-family: Marathon;
+    font-size: 25px;
+    color: var(--txt-color-2);
+}
+.logo{
+    position: absolute;
+    bottom: 10%;
+    border-bottom: 1px solid var(--txt-color-2);
+    padding: 10px;
+}
